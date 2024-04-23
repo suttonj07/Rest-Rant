@@ -4,10 +4,11 @@ const Def = require('./default')
 function error404 () {
     return (
       <Def>
-          <main>
-              <h1>404: PAGE NOT FOUND</h1>
-              <p>Oops, sorry, we can't find this page!</p>
-          </main>
+              <main>
+                <h1>404: Page not found</h1>
+                <p>Oops, sorry we can't find this page!</p>
+                <img src="/images/cat.jpg" alt="Cat that is very sorry he can't find your page" />
+            </main>
       </Def>
     )
   }
