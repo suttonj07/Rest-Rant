@@ -43,3 +43,7 @@ main {
   margin-left: 20px;
   background-color: white;
 }
+
+img {
+  max-width: 150px;
+}
