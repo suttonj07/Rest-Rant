@@ -64,15 +64,15 @@
 const React = require('react')
 const Def = require('../default')
 
-function new_form (data) {
-    let message = ''                 
-      if (data.message) {
-        message = (
-          <h4 className="alert-danger">
-            {data.message}
-          </h4>
-        )
-      }}
+// function new_form (data) {
+//     let message = ''                 
+//       if (data.message) {
+//         message = (
+//           <h4 className="alert-danger">
+//             {data.message}
+//           </h4>
+//         )
+//       }}
 
 function show ({place}) {
     return (
@@ -119,4 +119,4 @@ function show ({place}) {
 }
 
 module.exports = show
-module.exports = new_form
+// module.exports = new_form
