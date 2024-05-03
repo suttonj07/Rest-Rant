@@ -1,4 +1,4 @@
-const db = require('./models')
+const db = require('../models')
 
 db.Place.create([{
     name: 'H-Thai-ML',
@@ -23,3 +23,5 @@ db.Place.create([{
     console.log('Failure!', err)
     process.exit()
 })
+// the promise => will run the code and if it works we get success, if not it will run failure. 
+// process.exit tells it to stop the process
