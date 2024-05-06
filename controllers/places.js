@@ -67,6 +67,12 @@ router.get('/:id', (req, res) => {
 //       res.render('places/newcomment', { place });
 //     })
 // })
+// router.post('/:id/comment', (req, res) => {
+//   console.log(req.body)
+//   req.body.rant = req.body.rant ? true : false
+//   res.send('GET /places/:id/comment stub')
+// })
+
 
 router.post('/:id/comment', (req, res) => {
   console.log(req.body)
