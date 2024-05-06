@@ -16,8 +16,8 @@ function comment_form ({place}) {
                     <input className="form-control" id="content" name="content" />
                 </div>
                 <div className="form-group mx-auto col-sm-6 col-md-4 col-lg-3">
-                    <label htmlFor="rating">Stars</label>
-                    <input className="form-control" type="number" id="rating" name="rating" value={5} max="5" min="0" required />
+                    <label htmlFor="stars">Stars</label>
+                    <input className="form-control" type="number" id="stars" name="stars" value={5} max="5" min="0" required />
                 </div>
                 <div className="form-group mx-auto col-sm-6 col-md-4 col-lg-3">
                   <label htmlFor="rant">Rant</label>

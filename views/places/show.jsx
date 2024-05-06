@@ -58,7 +58,7 @@ function show ({place}) {
                   Comments
                 </h2>
                 <h3>
-                  No Comments
+                  { comments ? comments : "No Comments" }
                 </h3>
               </div>
           </div>
