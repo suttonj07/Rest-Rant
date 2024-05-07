@@ -9,11 +9,26 @@ function show ({place}) {
       No comments yet!
     </h3>
   )
-
+  let rating = (
+    <h3 className="inactive">
+      Not yet rated
+    </h3>
+  )
+ 
   if (place.comments.length) {
+    let sumRatings = place.comments.reduce((tot, c) => {
+      return tot + c.stars
+    }, 0)
+    let averageRating = sumRatings / place.comments.length
+    rating = (
+      <h3>
+        {averageRating} stars
+      </h3>
+    )
+         
     comments = place.comments.map(c => {
       return (
-        <div className="border">
+        <div className="border" key={c._id}>
           <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
           <h4>{c.content}</h4>
           <h3>
@@ -36,6 +51,7 @@ function show ({place}) {
             </div>
             <div className="col-sm-6">
               <h2>Rating</h2>
+              {rating}
               <h3>
                 Not Rated
               </h3>
@@ -68,4 +84,6 @@ function show ({place}) {
 }
 
 module.exports = show
-// module.exports = new_form
+
+
+
