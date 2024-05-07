@@ -6,8 +6,19 @@ function edit_form ({place, id}) {
         <Def>
           <main>
             <h1>Edit Place</h1>
-            <form method="POST" action={`/places/${id}?_method=PUT`} >
+            <form method="POST" action={`/places/${place.id}?_method=PUT`}>
+
                 <div className="row">
+                    
+                    <div className="form-group col-sm-4">
+                        <label htmlFor="founded">Founded</label>
+                        <input className="form-control" 
+                        id="founded" 
+                        name="founded" 
+                        value={place.founded} 
+                        />
+                    </div>
+   
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Place Name</label>
                         <input type="text"
@@ -57,3 +68,6 @@ function edit_form ({place, id}) {
 }
 
 module.exports = edit_form
+
+
+   

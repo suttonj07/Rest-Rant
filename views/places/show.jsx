@@ -19,10 +19,14 @@ function show ({place}) {
     let sumRatings = place.comments.reduce((tot, c) => {
       return tot + c.stars
     }, 0)
-    let averageRating = sumRatings / place.comments.length
+    let averageRating = Math.round(sumRatings / place.comments.length)
+    let stars = ''
+    for (let i = 0; i < averageRating; i++) {
+      stars += 'â­ï¸'
+    }
     rating = (
       <h3>
-        {averageRating} stars
+       {stars} stars
       </h3>
     )
          
@@ -84,6 +88,8 @@ function show ({place}) {
 }
 
 module.exports = show
+
+
 
 
 
